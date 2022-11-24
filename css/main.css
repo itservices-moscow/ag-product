@@ -547,7 +547,9 @@ body.no-scroll {
 
 .catalog-page.alpengold .header-nav__link,
 .catalog-page.oreo .header-nav__link,
-.catalog-page.maxfun .header-nav__link {
+.catalog-page.maxfun .header-nav__link,
+.catalog-page.aero .header-nav__link,
+.product-page.aero .header-nav__link {
     color: #32140B;
 }
 
@@ -918,6 +920,11 @@ body.no-scroll {
     background: linear-gradient(180deg, #D53D0D 0%, #000000 100%);
 }
 
+.catalog-page.aero,
+.product-page.aero {
+    background: #FEFEFE;
+}
+
 .catalog-page__wrapper,
 .product-page__wrapper {
     position: relative;
@@ -990,6 +997,10 @@ body.no-scroll {
     background: url(../img/catalog/desert/banner.png) center top/cover no-repeat;
 }
 
+.catalog-banner.aero {
+    background: url(../img/catalog/aero/banner.png) center top/cover no-repeat;
+}
+
 .catalog-banner .container {
     position: relative;
     height: 100%;
@@ -1003,7 +1014,9 @@ body.no-scroll {
 }
 
 .catalog-page.oreo .breadcrumbs,
-.catalog-page.maxfun .breadcrumbs {
+.catalog-page.maxfun .breadcrumbs,
+.catalog-page.aero .breadcrumbs,
+.product-page.aero .breadcrumbs {
     color: #32140B;
 }
 
@@ -1029,7 +1042,9 @@ body.no-scroll {
 }
 
 .catalog-page.oreo .breadcrumbs a::after,
-.catalog-page.maxfun .breadcrumbs a::after {
+.catalog-page.maxfun .breadcrumbs a::after,
+.catalog-page.aero .breadcrumbs a::after,
+.product-page.aero .breadcrumbs a::after {
     background-image: url(../img/catalog/arrow-breadcrumbs-brown.svg);
 }
 
@@ -1234,6 +1249,10 @@ body.no-scroll {
     color: #fff;
 }
 
+.aero .product-weight {
+    background: rgba(105, 105, 105, 0.3);
+}
+
 .product-desc {
     margin-top: 16px;
     font-weight: 500;
@@ -1244,6 +1263,10 @@ body.no-scroll {
 
 .product-desc span {
     color: #E0AA23;
+}
+
+.aero .product-desc {
+    color: #32140B;
 }
 
 .accordion-wrap {
@@ -1268,6 +1291,11 @@ body.no-scroll {
     height: 1px;
     background: #fff;
     opacity: 0.2;
+}
+
+.aero .accordion-item::before {
+    background: #696969;
+    opacity: 0.3;
 }
 
 .accordion-item-title {
@@ -1303,6 +1331,10 @@ body.no-scroll {
     padding: 16px 0 0;
 }
 
+.aero .accordion-item-text {
+    color: #32140B;
+}
+
 .product-detail-table {
     border-spacing: 0;
 }
@@ -1317,9 +1349,18 @@ body.no-scroll {
     border-right: 1px solid rgb(255, 255, 255, .2);
 }
 
+.aero .product-detail-table th:first-child,
+.aero .product-detail-table td:first-child {
+    border-right: 1px solid rgba(105, 105, 105, 0.3);
+}
+
 .product-detail-table td {
     padding: 5px 10px;
     border-top: 1px solid rgb(255, 255, 255, .2);
+}
+
+.aero .product-detail-table td {
+    border-top: 1px solid rgba(105, 105, 105, 0.3);
 }
 
 .product-detail-table th:last-child,
@@ -1701,6 +1742,10 @@ body.no-scroll {
         background: url(../img/catalog/desert/banner-mob.png) center/cover no-repeat;
     }
 
+    .catalog-banner.aero {
+        background: url(../img/catalog/aero/banner-mob.png) center/cover no-repeat;
+    }
+
     .catalog-logo {
         top: 0;
         left: 0;
@@ -1734,6 +1779,12 @@ body.no-scroll {
         height: 270px;
     }
 
+    .catalog-banner.aero .catalog-banner-product {
+        bottom: -204px;
+        width: 320px;
+        height: 312px;
+    }
+
     .catalog-banner.oreo .catalog-banner-product-img {
         width: 244px;
     }
@@ -1748,6 +1799,10 @@ body.no-scroll {
 
     .catalog-banner.desert .catalog-banner-product-img {
         width: 245px;
+    }
+
+    .catalog-banner.aero .catalog-banner-product-img {
+        width: 282px;
     }
 
     .catalog-banner.oreo .catalog-banner-product-decor {
@@ -1774,6 +1829,13 @@ body.no-scroll {
         right: 30px;
     }
 
+    .catalog-banner.aero .catalog-banner-product-decor {
+        left: -20px;
+        bottom: 15px;
+        right: auto;
+        width: 179px;
+    }
+
     .catalog-content {
         margin-top: 225px;
     }
@@ -1792,6 +1854,10 @@ body.no-scroll {
 
     .desert .catalog-content {
         margin-top: 200px;
+    }
+
+    .aero .catalog-content {
+        margin-top: 235px;
     }
 
     .products-grid {
