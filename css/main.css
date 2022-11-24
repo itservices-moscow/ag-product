@@ -913,6 +913,11 @@ body.no-scroll {
     background: linear-gradient(180deg, #33241E 0%, #000000 100%);
 }
 
+.catalog-page.desert,
+.product-page.desert {
+    background: linear-gradient(180deg, #D53D0D 0%, #000000 100%);
+}
+
 .catalog-page__wrapper,
 .product-page__wrapper {
     position: relative;
@@ -979,6 +984,10 @@ body.no-scroll {
 
 .catalog-banner.dark {
     background: url(../img/catalog/dark/banner.png) center top/cover no-repeat;
+}
+
+.catalog-banner.desert {
+    background: url(../img/catalog/desert/banner.png) center top/cover no-repeat;
 }
 
 .catalog-banner .container {
@@ -1084,6 +1093,11 @@ body.no-scroll {
 }
 
 .catalog-banner.dark .catalog-banner-product-decor {
+    bottom: 0;
+    right: 100px;
+}
+
+.catalog-banner.desert .catalog-banner-product-decor {
     bottom: 0;
     right: 100px;
 }
@@ -1215,7 +1229,8 @@ body.no-scroll {
 
 .oreo .product-weight,
 .maxfun .product-weight,
-.dark .product-weight {
+.dark .product-weight,
+.desert .product-weight {
     color: #fff;
 }
 
@@ -1513,6 +1528,10 @@ body.no-scroll {
         right: 0;
     }
 
+    .catalog-banner.desert .catalog-banner-product-decor {
+        right: 0;
+    }
+
     .product-wrapper {
         flex-direction: column;
         padding-top: 0;
@@ -1678,6 +1697,10 @@ body.no-scroll {
         background: url(../img/catalog/dark/banner-mob.png) center/cover no-repeat;
     }
 
+    .catalog-banner.desert {
+        background: url(../img/catalog/desert/banner-mob.png) center/cover no-repeat;
+    }
+
     .catalog-logo {
         top: 0;
         left: 0;
@@ -1707,6 +1730,10 @@ body.no-scroll {
         bottom: -110px;
     }
 
+    .catalog-banner.desert .catalog-banner-product {
+        height: 270px;
+    }
+
     .catalog-banner.oreo .catalog-banner-product-img {
         width: 244px;
     }
@@ -1717,6 +1744,10 @@ body.no-scroll {
 
     .catalog-banner.dark .catalog-banner-product-img {
         width: 214px;
+    }
+
+    .catalog-banner.desert .catalog-banner-product-img {
+        width: 245px;
     }
 
     .catalog-banner.oreo .catalog-banner-product-decor {
@@ -1733,6 +1764,16 @@ body.no-scroll {
         width: 175px;
     }
 
+    .catalog-banner.dark .catalog-banner-product-decor {
+        bottom: -10px;
+        right: 35px;
+        width: 114px;
+    }
+
+    .catalog-banner.desert .catalog-banner-product-decor {
+        right: 30px;
+    }
+
     .catalog-content {
         margin-top: 225px;
     }
@@ -1747,6 +1788,10 @@ body.no-scroll {
 
     .dark .catalog-content {
         margin-top: 170px;
+    }
+
+    .desert .catalog-content {
+        margin-top: 200px;
     }
 
     .products-grid {
