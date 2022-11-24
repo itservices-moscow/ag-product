@@ -908,6 +908,11 @@ body.no-scroll {
     background: linear-gradient(180deg, #0081E3 0%, #002B4B 100%), #000000;
 }
 
+.catalog-page.dark,
+.product-page.dark {
+    background: linear-gradient(180deg, #33241E 0%, #000000 100%);
+}
+
 .catalog-page__wrapper,
 .product-page__wrapper {
     position: relative;
@@ -970,6 +975,10 @@ body.no-scroll {
 
 .catalog-banner.maxfun {
     background: url(../img/catalog/maxfun/banner.png) center top/cover no-repeat;
+}
+
+.catalog-banner.dark {
+    background: url(../img/catalog/dark/banner.png) center top/cover no-repeat;
 }
 
 .catalog-banner .container {
@@ -1072,6 +1081,11 @@ body.no-scroll {
 .catalog-banner.oreo .catalog-banner-product-decor {
     bottom: 0;
     right: 0;
+}
+
+.catalog-banner.dark .catalog-banner-product-decor {
+    bottom: 0;
+    right: 100px;
 }
 
 .products-grid {
@@ -1200,7 +1214,8 @@ body.no-scroll {
 }
 
 .oreo .product-weight,
-.maxfun .product-weight {
+.maxfun .product-weight,
+.dark .product-weight {
     color: #fff;
 }
 
@@ -1494,6 +1509,10 @@ body.no-scroll {
         right: -20px;
     }
 
+    .catalog-banner.dark .catalog-banner-product-decor {
+        right: 0;
+    }
+
     .product-wrapper {
         flex-direction: column;
         padding-top: 0;
@@ -1655,6 +1674,10 @@ body.no-scroll {
         background: url(../img/catalog/maxfun/banner-mob.png) center/cover no-repeat;
     }
 
+    .catalog-banner.dark {
+        background: url(../img/catalog/dark/banner-mob.png) center/cover no-repeat;
+    }
+
     .catalog-logo {
         top: 0;
         left: 0;
@@ -1680,12 +1703,20 @@ body.no-scroll {
         height: 231px;
     }
 
+    .catalog-banner.dark .catalog-banner-product {
+        bottom: -110px;
+    }
+
     .catalog-banner.oreo .catalog-banner-product-img {
         width: 244px;
     }
 
     .catalog-banner.maxfun .catalog-banner-product-img {
         width: 222px;
+    }
+
+    .catalog-banner.dark .catalog-banner-product-img {
+        width: 214px;
     }
 
     .catalog-banner.oreo .catalog-banner-product-decor {
@@ -1697,6 +1728,11 @@ body.no-scroll {
         right: -60px;
     }
 
+    .catalog-banner.dark .catalog-banner-product-decor {
+        bottom: -10px;
+        width: 175px;
+    }
+
     .catalog-content {
         margin-top: 225px;
     }
@@ -1706,6 +1742,10 @@ body.no-scroll {
     }
 
     .maxfun .catalog-content {
+        margin-top: 170px;
+    }
+
+    .dark .catalog-content {
         margin-top: 170px;
     }
 
