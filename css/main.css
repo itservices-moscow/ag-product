@@ -925,6 +925,11 @@ body.no-scroll {
     background: #FEFEFE;
 }
 
+.catalog-page.picnic,
+.product-page.picnic {
+    background: linear-gradient(180deg, #220A45 33.85%, #000000 100%);
+}
+
 .catalog-page__wrapper,
 .product-page__wrapper {
     position: relative;
@@ -1001,6 +1006,10 @@ body.no-scroll {
     background: url(../img/catalog/aero/banner.png) center top/cover no-repeat;
 }
 
+.catalog-banner.picnic {
+    background: url(../img/catalog/picnic/banner.png) center top/cover no-repeat;
+}
+
 .catalog-banner .container {
     position: relative;
     height: 100%;
@@ -1072,6 +1081,11 @@ body.no-scroll {
     height: 170px;
 }
 
+.catalog-banner.picnic .catalog-logo {
+    top: 50px;
+    left: -950px;
+}
+
 .catalog-content {
     margin-top: 80px;
 }
@@ -1088,6 +1102,13 @@ body.no-scroll {
     right: 50px;
     width: 240px;
     height: 245px;
+}
+
+.catalog-banner.picnic .catalog-banner-product {
+    right: 20px;
+    bottom: 30px;
+    width: 338px;
+    height: 215px;
 }
 
 .catalog-banner-product-img {
@@ -1117,6 +1138,13 @@ body.no-scroll {
     right: 100px;
 }
 
+.catalog-banner.picnic .catalog-banner-product-decor {
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin: auto;
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1142,16 +1170,29 @@ body.no-scroll {
     margin-bottom: 15px;
 }
 
+.catalog-page.picnic .product-img {
+    height: 268px;
+    margin-bottom: 32px;
+    padding-top: 0;
+}
+
+.catalog-page.picnic .product-big .product-img {
+    padding-top: 46px;
+}
+
 .product-bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     margin: auto;
     width: 100%;
     height: 256px;
     border-radius: 15px;
+}
+
+.catalog-page.picnic .product-bg {
+    height: 268px;
 }
 
 .product-img img {
@@ -1172,6 +1213,10 @@ body.no-scroll {
     line-height: 1;
     text-align: center;
     color: #E0AA23;
+}
+
+.catalog-page.picnic .product-name {
+    max-width: 370px;
 }
 
 .product-page .container {
@@ -1200,9 +1245,17 @@ body.no-scroll {
     padding-top: 30px;
 }
 
+.product-page.picnic .product-wrapper .product-img {
+    padding-top: 10px;
+}
+
 .product-wrapper .product-bg {
     bottom: auto;
     height: 365px;
+}
+
+.product-page.picnic .product-wrapper .product-bg {
+    height: 282px;
 }
 
 .product-decor {
@@ -1524,7 +1577,8 @@ body.no-scroll {
         height: 670px;
     }
 
-    .catalog-logo {
+    .catalog-logo,
+    .catalog-banner.picnic .catalog-logo {
         left: 15px;
         right: auto;
     }
@@ -1554,10 +1608,20 @@ body.no-scroll {
         height: 230px;
     }
 
+    .catalog-banner.picnic .catalog-banner-product {
+        right: 0;
+        width: 295px;
+        height: 220px;
+    }
+
     .catalog-banner-product-img {
         right: 0;
         margin: auto;
         width: 207px;
+    }
+
+    .catalog-banner.picnic .catalog-banner-product-img {
+        width: auto;
     }
 
     .catalog-banner-product-decor {
@@ -1571,6 +1635,12 @@ body.no-scroll {
 
     .catalog-banner.desert .catalog-banner-product-decor {
         right: 0;
+    }
+
+    .catalog-banner.picnic .catalog-banner-product-decor {
+        right: -20px;
+        bottom: 0;
+        width: 128px;
     }
 
     .product-wrapper {
@@ -1594,6 +1664,10 @@ body.no-scroll {
         height: 350px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+    }
+
+    .product-page.picnic .product-bg {
+        height: 250px;
     }
 
     .product-decor {
@@ -1746,6 +1820,10 @@ body.no-scroll {
         background: url(../img/catalog/aero/banner-mob.png) center/cover no-repeat;
     }
 
+    .catalog-banner.picnic {
+        background: url(../img/catalog/picnic/banner-mob.png) center/cover no-repeat;
+    }
+
     .catalog-logo {
         top: 0;
         left: 0;
@@ -1753,6 +1831,13 @@ body.no-scroll {
         bottom: auto;
         max-width: 98px;
         height: 99px;
+    }
+
+    .catalog-banner.picnic .catalog-logo {
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 135px;
     }
 
     .catalog-banner-product {
@@ -1783,6 +1868,10 @@ body.no-scroll {
         bottom: -204px;
         width: 320px;
         height: 312px;
+    }
+
+    .catalog-banner.picnic .catalog-banner-product {
+        bottom: -120px;
     }
 
     .catalog-banner.oreo .catalog-banner-product-img {
@@ -1858,6 +1947,10 @@ body.no-scroll {
 
     .aero .catalog-content {
         margin-top: 235px;
+    }
+
+    .picnic .catalog-content {
+        margin-top: 170px;
     }
 
     .products-grid {
