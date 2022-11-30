@@ -1745,6 +1745,11 @@ body.no-scroll {
     .cart-button img {
         margin-left: 5px;
     }
+
+    .popup {
+        padding-top: 1%;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 600px) {
