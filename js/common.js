@@ -62,4 +62,20 @@ document.addEventListener('DOMContentLoaded', () => {
         $(popupId).removeClass('js-popup-show');
         $('body').removeClass('no-scrolling');
     }
+
+    if($('.cart-button').length) {
+        $(window).on('scroll load', function () {
+            var top = $(window).scrollTop();
+            var destination = $('.cart-button-wrapper').offset().top-800;
+            var btn = $('.cart-button').offset().top
+            var wrapper = $('.cart-button-wrapper').offset().top;
+            console.log('top '+top, 'destination '+top, 'btn '+btn, 'wrapper '+wrapper)
+            if(btn >= wrapper) {
+                $('.cart-button').removeClass('fixed');
+            }
+            if(top < destination) {
+                $('.cart-button').addClass('fixed');
+            }
+        });
+    }
 });
