@@ -13,4 +13,69 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     })
+
+    function openAccordion() {
+        var wrap = $('.accordion-wrap');
+        var accordion = wrap.find('.accordion-item-title');
+
+        accordion.on('click', function () {
+          var $this = $(this);
+          var $parent = $(this).parent();
+          var content = $this.next();
+
+          if (content.is(':visible')) {
+            $this.removeClass('active');
+            $parent.removeClass('active');
+            content.slideUp('fast');
+          } else {
+            $this.addClass('active');
+            $parent.addClass('active');
+            content.slideDown('fast');
+          }
+
+        });
+    }
+    openAccordion();
+
+    function OpenPopup(popupId) {
+        $('body').removeClass('no-scrolling');
+        $('.popup').removeClass('js-popup-show');
+        popupId = '#' + popupId;
+        $(popupId).addClass('js-popup-show');
+        $('body').addClass('no-scrolling');
+    }
+    $('.pop-op').click(function (e) {
+        e.preventDefault();
+        let data = $(this).data('popup');
+        OpenPopup(data);
+    });
+    function closePopup() {
+        $('.js-close-popup').on('click', function (e) {
+            e.preventDefault();
+            $('.popup').removeClass('js-popup-show');
+            $('body').removeClass('no-scrolling');
+        });
+    }
+    closePopup();
+    function clickClosePopup(popupId) {
+        popupId = '#' + popupId;
+        $(popupId).removeClass('js-popup-show');
+        $('body').removeClass('no-scrolling');
+    }
+
+    if($('.cart-button').length) {
+        $(window).on('scroll load', function () {
+            var top = $(window).scrollTop();
+            var destination = $('.cart-button-wrapper').offset().top-800;
+            var btn = $('.cart-button').offset().top
+            var wrapper = $('.cart-button-wrapper').offset().top;
+            console.log('top '+top, 'destination '+top, 'btn '+btn, 'wrapper '+wrapper)
+            if(btn >= wrapper) {
+                $('.cart-button').removeClass('fixed');
+            }
+            if(top < destination) {
+                $('.cart-button').addClass('fixed');
+            }
+        });
+    }
 });
