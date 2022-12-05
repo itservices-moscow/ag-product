@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
 
+    if(window.innerWidth > 992) {
+        $('.header-nav__item-have-submenu').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+        });
+    }
+
     function openAccordion() {
         var wrap = $('.accordion-wrap');
         var accordion = wrap.find('.accordion-item-title');
