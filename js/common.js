@@ -84,4 +84,34 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    let slider_facts = $('.facts-slider');
+    if (slider_facts.length) {
+        slider_facts.owlCarousel({
+            center: false,
+            items: 7,
+            margin: 15,
+            loop: true,
+            nav: false,
+            dots: true,
+            autoHeight: false,
+            mouseDrag: true,
+            touchDrag: true,
+            navSpeed: 1300,
+            responsive: {
+                0: {
+                    center: true,
+                    items: 2,
+                },
+                767: {
+                    center: true,
+                    items: 5,
+                    margin: 20
+                },
+                1100: {
+                    items: 7
+                }
+            }
+        });
+    }
 });
