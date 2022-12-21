@@ -1808,6 +1808,8 @@ body.no-scroll {
 .facts-slide-img img {
     width: auto !important;
     height: 100%;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .facts-slide-year {
