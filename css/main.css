@@ -1702,6 +1702,8 @@ body.no-scroll {
     bottom: 0;
     margin: auto;
     width: 100%;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .fact-info {
@@ -2112,6 +2114,7 @@ body.no-scroll {
 
     .facts-page .facts-page__wrapper {
         background-size: 1600px;
+        overflow: hidden;
     }
 
     .facts-content {
@@ -2140,6 +2143,8 @@ body.no-scroll {
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 110px;
     }
 
     .fact-img {
@@ -2176,14 +2181,10 @@ body.no-scroll {
     }
 
     .fact2 .fact-img img {
+        top: -25px;
         bottom: auto;
         width: auto;
         height: 641px;
-    }
-
-    .fact-wrapper {
-        margin-top: 0;
-        margin-bottom: 110px;
     }
 
     .fact3 .fact-img {
@@ -2231,7 +2232,7 @@ body.no-scroll {
 
     .fact4 .fact-img {
         width: 452px;
-        height: 489px;
+        height: 420px;
         margin: 0 -100px;
     }
 
@@ -2239,6 +2240,12 @@ body.no-scroll {
         top: 0;
         left: -250px;
         right: -250px;
+    }
+
+    .fact4 .fact-img img {
+        bottom: auto;
+        width: auto;
+        height: 489px;
     }
 
     .facts-content .home-content__footer-wrapper {
