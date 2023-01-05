@@ -173,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     let html = 'img/recipes/'+url+'.gif'
                     elem.next().attr('src', html);
                     prev_slide.find('.recipe-static').next().attr('src', '');
-                    console.log(elem.next())
                 }, 100)
             });
         }
