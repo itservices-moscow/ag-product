@@ -114,4 +114,71 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    if($(window).innerWidth() > 767) {
+        $('.recipe-static').mouseenter(function(e){
+            let url = $(this).data('recipe');
+            let html = 'img/recipes/'+url+'.gif'
+            $(this).next().attr('src', html);
+
+            dataLayer.push({'event': url});
+
+            $('.recipe-static').mouseleave(function(e){
+                url, html = null;
+                $(this).next().attr('src', '');
+            });
+        });
+    }
+
+    let slider_recipes = $('.recipes-slider');
+    if (slider_recipes.length) {
+        slider_recipes.owlCarousel({
+            center: false,
+            items: 3,
+            margin: 30,
+            loop: false,
+            nav: true,
+            dots: true,
+            autoHeight: false,
+            mouseDrag: true,
+            touchDrag: true,
+            navSpeed: 1300,
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10,
+                    nav: false
+                },
+                767: {
+                    items: 2,
+                    margin: 15
+                },
+                1100: {
+                    items: 3
+                }
+            }
+        });
+
+        if($(window).innerWidth() < 768) {
+            let elem = slider_recipes.find('.owl-item.active .recipe-static');
+            let url = elem.data('recipe');
+            let html = 'img/recipes/'+url+'.gif'
+            elem.next().attr('src', html);
+
+            dataLayer.push({'event': url});
+
+            slider_recipes.on('changed.owl.carousel', function(event) {
+                setTimeout(function() {
+                    let prev_slide = slider_recipes.find('.owl-item.active').prev();
+                    let elem = slider_recipes.find('.owl-item.active .recipe-static');
+                    let url = elem.data('recipe');
+                    let html = 'img/recipes/'+url+'.gif'
+                    elem.next().attr('src', html);
+                    prev_slide.find('.recipe-static').next().attr('src', '');
+
+                    dataLayer.push({'event': url});
+                }, 100)
+            });
+        }
+    }
 });
