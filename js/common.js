@@ -165,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let html = 'img/recipes/'+url+'.gif'
             elem.next().attr('src', html);
 
+            dataLayer.push({'event': url});
+
             slider_recipes.on('changed.owl.carousel', function(event) {
                 setTimeout(function() {
                     let prev_slide = slider_recipes.find('.owl-item.active').prev();
@@ -173,6 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     let html = 'img/recipes/'+url+'.gif'
                     elem.next().attr('src', html);
                     prev_slide.find('.recipe-static').next().attr('src', '');
+
+                    dataLayer.push({'event': url});
                 }, 100)
             });
         }
