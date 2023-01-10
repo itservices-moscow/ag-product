@@ -284,7 +284,8 @@ body.no-scroll {
 
 .home-page__wrapper {
     min-height: 100vh;
-    background: url("../img/home-bg.jpg") top center/cover no-repeat;
+    background: url("../img/home-bg.jpg") top center/100% no-repeat;
+    background-color: #1d0b07;
 }
 
 .home-page__content {
@@ -404,6 +405,12 @@ body.no-scroll {
     height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
+}
+
+@media screen and (max-width: 1512px) {
+    .home-page__wrapper {
+        background-size: 1512px;
+    }
 }
 
 @media screen and (max-width: 1140px) {
