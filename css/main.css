@@ -2004,6 +2004,12 @@ body.no-scroll {
     opacity: 1;
 }
 
+.seo-text {
+    font-size: 2px;
+    line-height: 1;
+    color: #1d0b07;
+}
+
 @media screen and (max-width: 1440px) {
     .footer__block {
         max-width: unset;
