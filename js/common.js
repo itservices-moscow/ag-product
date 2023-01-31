@@ -181,4 +181,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    $('.lang-select').click(function(e){
+        e.preventDefault();
+        (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+
+        $('.lang-dropdown').fadeToggle();
+        $('body').on('click', function (e) {
+            var div = $('.lang-select, .lang-dropdown');
+
+            if (!div.is(e.target) && div.has(e.target).length === 0) {
+                $('.lang-select').removeClass('active');
+                $('.lang-dropdown').fadeOut();
+            }
+        });
+    });
 });

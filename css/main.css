@@ -490,6 +490,10 @@ body.no-scroll {
     z-index: 10;
 }
 
+.header .container {
+    position: relative;
+}
+
 .header__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -500,6 +504,7 @@ body.no-scroll {
 }
 
 .header__nav {
+    padding-right: 80px;
     margin: 0 0 0 auto;
 }
 
@@ -2010,6 +2015,99 @@ body.no-scroll {
     color: #1d0b07;
 }
 
+.lang-wrap {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    margin: auto;
+    width: 60px;
+    height: 38px;
+    z-index: 12;
+}
+
+.lang-select {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.lang-select::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 21px;
+    opacity: 0;
+    transition: all .2s linear;
+}
+
+.lang-select:hover::before {
+    opacity: 1;
+}
+
+.lang-select::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -25px;
+    bottom: 0;
+    width: 17px;
+    height: 8px;
+    margin: auto;
+    background: url(../img/lang/arrow-lang.svg) center no-repeat;
+    background-size: contain;
+    transition: all .2s linear;
+}
+
+.lang-select.active::after {
+    transform: rotate(-180deg);
+}
+
+.lang-select .lang-img {
+    position: relative;
+    z-index: 1;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 42px;
+    padding: 42px 2px 2px 2px;
+    background: #fff;
+    border-radius: 21px;
+}
+
+.lang {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang {
+    margin-top: 10px;
+}
+
+.lang:hover {
+    transform: scale(.9);
+}
+
+.lang .lang-img {
+    width: 38px;
+    height: 38px;
+}
+
 @media screen and (max-width: 1440px) {
     .footer__block {
         max-width: unset;
@@ -2368,6 +2466,44 @@ body.no-scroll {
 
     .facts-content .home-content__footer-wrapper {
         max-width: calc(100% - 32px);
+    }
+
+    .lang-wrap {
+        right: 55px;
+        width: 50px;
+        height: 30px;
+    }
+
+    .lang-select {
+        width: 30px;
+        height: 30px;
+    }
+
+    .lang-select::before {
+        width: 34px;
+        height: 34px;
+    }
+
+    .lang-select::after {
+        right: -20px;
+        width: 15px;
+        height: 7px;
+    }
+
+    .lang-dropdown {
+        width: 34px;
+        padding-top: 34px;
+    }
+
+    .lang {
+        width: 30px;
+        height: 30px;
+        margin-top: 6px;
+    }
+
+    .lang .lang-img {
+        width: 30px;
+        height: 30px;
     }
 }
 
