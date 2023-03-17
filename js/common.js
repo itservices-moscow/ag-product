@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
             var destination = $('.cart-button-wrapper').offset().top-800;
             var btn = $('.cart-button').offset().top
             var wrapper = $('.cart-button-wrapper').offset().top;
-            console.log('top '+top, 'destination '+top, 'btn '+btn, 'wrapper '+wrapper)
             if(btn >= wrapper) {
                 $('.cart-button').removeClass('fixed');
             }
@@ -196,4 +195,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    let slider_product = $('.product.with-slider');
+    if (slider_product.length) {
+        let boolka = false;
+        if ($('.product-page').hasClass('picnic')) {
+            boolka = true;
+        }
+        slider_product.owlCarousel({
+            center: false,
+            items: 1,
+            margin: 10,
+            loop: false,
+            nav: false,
+            dots: true,
+            autoHeight: boolka,
+            mouseDrag: true,
+            touchDrag: true,
+            navSpeed: 1300
+        });
+    }
 });
