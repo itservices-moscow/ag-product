@@ -1271,7 +1271,15 @@ body.no-scroll {
 }
 
 .product-wrapper .product-img {
+    align-items: flex-start;
+    height: 440px;
     padding-top: 30px;
+}
+
+.product-wrapper .product-img.second-image {
+    padding-top: 0 !important;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .product-page.picnic .product-wrapper .product-img {
@@ -1287,12 +1295,20 @@ body.no-scroll {
     height: 282px;
 }
 
+.product-page.picnic .mobile-visible {
+    display: none;
+}
+
 .product-decor {
     position: absolute !important;
-    bottom: -40px;
+    bottom: -20px;
     left: 0;
     right: -150px;
     margin: auto;
+}
+
+.owl-carousel .owl-item img.product-decor {
+    width: auto;
 }
 
 .product-wrapper .product:hover .product-img img {
@@ -1990,23 +2006,32 @@ body.no-scroll {
     display: none;
 }
 
-.recipes-slider .owl-dots .owl-dot span {
+.recipes-slider .owl-dots .owl-dot span,
+.product.with-slider .owl-dots .owl-dot span {
     width: 8px;
     height: 8px;
     margin: 7px;
     opacity: .3;
 }
 
-.recipes-slider .owl-dots .owl-dot.active span {
+.recipes-slider .owl-dots .owl-dot.active span,
+.product.with-slider .owl-dots .owl-dot.active span {
     width: 8px;
     transform: scale(2);
     opacity: 1;
 }
 
 .recipes-slider .owl-dots .owl-dot.active span, 
-.recipes-slider .owl-dots .owl-dot:hover span {
+.recipes-slider .owl-dots .owl-dot:hover span,
+.product.with-slider .owl-dots .owl-dot.active span, 
+.product.with-slider .owl-dots .owl-dot:hover span {
     background: #fff;
     opacity: 1;
+}
+
+.aero .product.with-slider .owl-dots .owl-dot.active span,
+.aero .product.with-slider .owl-dots .owl-dot span {
+    background: #651905;
 }
 
 .seo-text {
@@ -2208,20 +2233,39 @@ body.no-scroll {
         width: 128px;
     }
 
+    .product-page .breadcrumbs {
+        top: 76px;
+    }
+
+    .product-page.aero .breadcrumbs {
+        color: #fff;
+    }
+    .product-page.aero .breadcrumbs a::after {
+        background-image: url(../img/catalog/arrow-breadcrumbs.svg);
+    }
+
     .product-wrapper {
         flex-direction: column;
         padding-top: 0;
     }
 
     .product-wrapper .product {
-        margin: 0 auto 50px;
+        margin: 0 auto 25px;
     }
 
     .product-wrapper .product-img {
         position: static;
+        align-items: flex-start;
         max-width: 375px;
         width: 100%;
+        height: 300px;
         margin: 120px auto 0;
+        padding-top: 0;
+    }
+
+    .product-wrapper .product-img.second-image {
+        max-width: 320px;
+        height: 280px;
     }
 
     .product-page .product-bg {
@@ -2235,9 +2279,22 @@ body.no-scroll {
         height: 250px;
     }
 
+    .product-page.picnic .desktop-visible {
+        display: none;
+    }
+
+    .product-page.picnic .mobile-visible {
+        display: block;
+    }
+
+    .product-page.picnic .product-wrapper .product-img {
+        padding-top: 0;
+        height: auto;
+    }
+
     .product-decor {
         max-width: 206px;
-        bottom: -30px;
+        bottom: 0;
         right: -100px;
     }
 
