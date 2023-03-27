@@ -1315,6 +1315,10 @@ body.no-scroll {
     transform: none;
 }
 
+.oreo .product-wrapper .product .product-img .product-decor {
+    transform: translateY(10px) scale(.8);
+}
+
 .product-info {
     max-width: 560px;
     width: 100%;
